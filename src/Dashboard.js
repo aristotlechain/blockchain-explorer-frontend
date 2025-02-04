@@ -1,3 +1,4 @@
+// Dashboard.js
 import * as React from 'react';
 import { styled, createTheme, ThemeProvider } from '@mui/material/styles';
 import CssBaseline from '@mui/material/CssBaseline';
@@ -9,7 +10,6 @@ import List from '@mui/material/List';
 import Typography from '@mui/material/Typography';
 import Divider from '@mui/material/Divider';
 import IconButton from '@mui/material/IconButton';
-import Badge from '@mui/material/Badge';
 import Container from '@mui/material/Container';
 import Grid from '@mui/material/Grid';
 import Paper from '@mui/material/Paper';
@@ -18,11 +18,7 @@ import MenuIcon from '@mui/icons-material/Menu';
 import ChevronLeftIcon from '@mui/icons-material/ChevronLeft';
 import NotificationsIcon from '@mui/icons-material/Notifications';
 import { mainListItems, secondaryListItems } from './ListItems';
-import Transactions from "./components/Transactions";
-import {Route, Routes} from "react-router-dom";
-import Addresses from "./components/Addresses";
-import Wallet from "./components/Wallet";
-import Transfer from "./components/transfer/Transfer";
+import { Outlet } from 'react-router-dom';  // Import Outlet
 
 function Copyright(props) {
     return (
@@ -96,11 +92,7 @@ export default function Dashboard() {
             <Box sx={{ display: 'flex' }}>
                 <CssBaseline />
                 <AppBar position="absolute" open={open}>
-                    <Toolbar
-                        sx={{
-                            pr: '24px', // keep right padding when drawer closed
-                        }}
-                    >
+                    <Toolbar sx={{ pr: '24px' }}>
                         <IconButton
                             edge="start"
                             color="inherit"
@@ -161,12 +153,8 @@ export default function Dashboard() {
                         <Grid container>
                             <Grid item>
                                 <Paper sx={{ p: 2, display: 'flex', flexDirection: 'column' }}>
-                                    <Routes>
-                                        <Route path="/transactions" element={<Transactions/>} />
-                                        <Route path="/addresses" element={<Addresses/>} />
-                                        <Route path="/wallet" element={<Wallet/>} />
-                                        <Route path="/transfer/:address" element={<Transfer/>} />
-                                    </Routes>
+                                    {/* Render nested routes here */}
+                                    <Outlet />
                                 </Paper>
                             </Grid>
                         </Grid>
