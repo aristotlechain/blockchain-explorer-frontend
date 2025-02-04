@@ -4,7 +4,7 @@ import FormControl from '@mui/material/FormControl';
 import InputLabel from '@mui/material/InputLabel';
 import Select from '@mui/material/Select';
 import MenuItem from '@mui/material/MenuItem';
-import Title from "./Title";
+import Header from "./Header";
 
 // Generate Order Data
 function createData(id, address) {
@@ -31,7 +31,7 @@ export default function Addresses() {
 
     return (
         <React.Fragment>
-            <Title>Blockchain Node Addresses</Title>
+            <Header>Blockchain Node Addresses</Header>
             <FormControl variant="outlined" fullWidth>
                 <InputLabel id="address-select-label">Select Address to Transfer</InputLabel>
                 <Select

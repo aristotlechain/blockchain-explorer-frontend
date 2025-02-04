@@ -5,7 +5,7 @@ import TableBody from '@mui/material/TableBody';
 import TableCell from '@mui/material/TableCell';
 import TableHead from '@mui/material/TableHead';
 import TableRow from '@mui/material/TableRow';
-import Title from "./Title";
+import Header from "./Header";
 
 // Generate Order Data
 function createData(id, source, destination, amount, status, gasUsed, receiptHash, createdAt) {
@@ -52,7 +52,7 @@ function preventDefault(event) {
 export default function Transactions() {
     return (
         <React.Fragment>
-            <Title>Recent Transactions</Title>
+            <Header>Recent Transactions</Header>
             <Table size="small">
                 <TableHead>
                     <TableRow>

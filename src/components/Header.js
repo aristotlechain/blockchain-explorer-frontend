@@ -2,7 +2,7 @@ import * as React from 'react';
 import PropTypes from 'prop-types';
 import Typography from '@mui/material/Typography';
 
-function Title(props) {
+function Header(props) {
     return (
         <Typography component="h2" variant="h6" color="primary" gutterBottom>
             {props.children}
@@ -10,8 +10,8 @@ function Title(props) {
     );
 }
 
-Title.propTypes = {
+Header.propTypes = {
     children: PropTypes.node,
 };
 
-export default Title;
+export default Header;

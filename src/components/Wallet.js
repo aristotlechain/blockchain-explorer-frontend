@@ -1,7 +1,7 @@
 import * as React from 'react';
 import Link from '@mui/material/Link';
 import Typography from '@mui/material/Typography';
-import Title from "./Title";
+import Header from "./Header";
 
 function preventDefault(event) {
     event.preventDefault();
@@ -10,7 +10,7 @@ function preventDefault(event) {
 export default function Wallet() {
     return (
         <React.Fragment>
-            <Title>My Wallet</Title>
+            <Header>My Wallet</Header>
             <Typography component="p" variant="h4">
                 99997700 ETH
             </Typography>
