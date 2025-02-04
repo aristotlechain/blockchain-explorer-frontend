@@ -1,29 +1,24 @@
 // index.js
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import './index.css';
-import reportWebVitals from './reportWebVitals';
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Dashboard from "./Dashboard";
+import Home from "./components/Home";
 import Transactions from "./components/Transactions";
 import Addresses from "./components/Addresses";
 import Wallet from "./components/Wallet";
 import Transfer from "./components/transfer/Transfer";
-// If you have a separate Home component, you can add it as another route
-// import Home from "./components/Home";
 
+// Define your app routes using Dashboard as the layout
 const AppRoutes = () => (
     <Routes>
-        {/* Use Dashboard as the layout for all nested routes */}
         <Route path="/" element={<Dashboard />}>
-            {/* The default route (when at "/") */}
-            <Route index element={<Transactions />} />
+            {/* The Home component will now be rendered at the root path */}
+            <Route index element={<Home />} />
             <Route path="transactions" element={<Transactions />} />
             <Route path="addresses" element={<Addresses />} />
             <Route path="wallet" element={<Wallet />} />
             <Route path="transfer/:address" element={<Transfer />} />
-            {/* Optionally, if you want a home page component:
-          <Route path="home" element={<Home />} /> */}
         </Route>
     </Routes>
 );
@@ -36,5 +31,3 @@ root.render(
         </BrowserRouter>
     </React.StrictMode>
 );
-
-reportWebVitals();

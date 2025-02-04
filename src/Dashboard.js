@@ -16,9 +16,8 @@ import Paper from '@mui/material/Paper';
 import Link from '@mui/material/Link';
 import MenuIcon from '@mui/icons-material/Menu';
 import ChevronLeftIcon from '@mui/icons-material/ChevronLeft';
-import NotificationsIcon from '@mui/icons-material/Notifications';
 import { mainListItems, secondaryListItems } from './ListItems';
-import { Outlet } from 'react-router-dom';  // Import Outlet
+import { Outlet } from 'react-router-dom'; // Import Outlet
 
 function Copyright(props) {
     return (
@@ -151,9 +150,9 @@ export default function Dashboard() {
                     <Toolbar />
                     <Container maxWidth="lg" sx={{ mt: 4, mb: 4 }}>
                         <Grid container>
-                            <Grid item>
+                            <Grid item xs={12}>
                                 <Paper sx={{ p: 2, display: 'flex', flexDirection: 'column' }}>
-                                    {/* Render nested routes here */}
+                                    {/* This Outlet renders the nested route components (like Home) */}
                                     <Outlet />
                                 </Paper>
                             </Grid>
