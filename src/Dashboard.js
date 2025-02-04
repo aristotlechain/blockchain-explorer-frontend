@@ -24,7 +24,7 @@ function Copyright(props) {
         <Typography variant="body2" color="text.secondary" align="center" {...props}>
             {'Savvy Sharma 101516795 '}
             <Link color="inherit" href="http://localhost:3000/">
-                Blockchain Explorer Project
+                Explorer Assignment
             </Link>{' '}
             {new Date().getFullYear()}
             {'.'}
