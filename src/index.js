@@ -18,6 +18,7 @@ import '@fontsource/roboto/700.css';
 const AppRoutes = () => (
     <Routes>
         <Route path="/" element={<Dashboard />}>
+            <Route index element={<Transactions />} />
             <Route path="transactions" element={<Transactions />} />
             <Route path="addresses" element={<Addresses />} />
             <Route path="wallet" element={<Wallet />} />
