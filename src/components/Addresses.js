@@ -6,7 +6,7 @@ import Select from '@mui/material/Select';
 import MenuItem from '@mui/material/MenuItem';
 import Header from "./Header";
 
-// Generate Order Data
+// Generating Order Data
 function createData(id, address) {
     return { id, address };
 }

@@ -1,8 +1,10 @@
 import React from 'react';
 import styles from './styles/Home.module.css';
 
+// Here I've added a Static Component for Home Dashboard Beautification
+
 const Home = () => {
-    // Mock data - same as previous example
+
     const latestBlocks = [
         { height: 123456, timestamp: '2023-09-20 14:30', miner: '0xabc...123', transactions: 15 },
         { height: 123455, timestamp: '2023-09-20 14:28', miner: '0xdef...456', transactions: 8 },
@@ -21,15 +23,6 @@ const Home = () => {
             <div className={styles.header}>
                 <h1 className={styles.title}>Blockchain Explorer</h1>
                 <p className={styles.subtitle}>Explore transactions, blocks, and smart contracts on the network</p>
-
-                {/* Search Bar */}
-                <div className={styles.searchContainer}>
-                    <input
-                        type="text"
-                        placeholder="Search by block height, transaction hash, or address"
-                        className={styles.searchInput}
-                    />
-                </div>
             </div>
 
             {/* Stats Cards */}
@@ -97,11 +90,6 @@ const Home = () => {
                         </tbody>
                     </table>
                 </div>
-            </div>
-
-            {/* Footer Note */}
-            <div className={styles.footer}>
-                <p>🔗 Powered by Blockchain Explorer - All data from the testnet network</p>
             </div>
         </div>
     );
